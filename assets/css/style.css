@@ -5,10 +5,10 @@ html, body, * {
 }
 
 /* Heading color utility classes */
-heading-red { color: #c0392b; }
-heading-blue { color: #2980b9; }
-heading-green { color: #27ae60; }
-heading-purple { color: #8e44ad; }
+.heading-red { color: #c0392b; }
+.heading-blue { color: #2980b9; }
+.heading-green { color: #27ae60; }
+.heading-purple { color: #8e44ad; }
 
 /* Larger heading sizes */
 h1 { font-size: 3rem; line-height: 1.1; }
@@ -21,6 +21,34 @@ h2 { font-size: 2rem; }
 @media (max-width: 600px) {
 	h1 { font-size: 2rem; }
 	.nav-large a { font-size: 1rem; }
+}
+
+/* Header and hero responsive tweaks */
+@media (max-width: 900px) {
+  .top-header { padding: 0.75rem 1.25rem; }
+  .top-header .site-title { font-size: 1.25rem; }
+  .nav-large a { font-size: 1rem; padding: 0.2rem 0.4rem; }
+  .tagline span { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  .top-header .site-title { font-size: 1.05rem; }
+  .top-nav ul {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+  .top-nav ul li { margin: 0; }
+  .nav-large a { font-size: 0.95rem; }
+  .tagline { margin-top: 1.5rem; }
+  .tagline span { font-size: 1.4rem; }
 }
 
 /* Base styles for all screens */
@@ -53,6 +81,7 @@ h2 { font-size: 2rem; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   background-image: url("../images/red hill.jpg");
   background-size: cover;
   background-position: center center;
@@ -84,4 +113,42 @@ h2 { font-size: 2rem; }
 }
 .nav-large a:hover {
   text-decoration: underline;
+}
+
+/* Header overlay in the hero image */
+.top-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.top-header .site-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.top-nav ul { margin: 0; }
+
+/* Stacked, larger tagline in the hero */
+.tagline {
+  margin-top: auto;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1;
+}
+.tagline span { display: block; font-size: 2.2rem; text-shadow: 0 2px 6px rgba(0,0,0,0.6); }
+
+@media (max-width: 600px) {
+  .top-header { padding: 0.5rem 1rem; }
+  .top-header .site-title { font-size: 1.1rem; }
+  .tagline span { font-size: 1.4rem; }
 }
