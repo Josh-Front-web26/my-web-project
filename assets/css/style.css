@@ -115,9 +115,13 @@ h2 { font-size: 2rem; }
   color: #ffffff;
   text-decoration: none;
   padding: 0.25rem 0.5rem;
+  display: inline-block;
+  transition: color 0.18s ease, transform 0.18s ease;
 }
 .nav-large a:hover {
-  text-decoration: underline;
+  color: rgba(190, 118, 94, 1);
+  transform: translateY(3px) scale(1.06);
+  text-decoration: none;
 }
 
 /* Header overlay in the hero image */
