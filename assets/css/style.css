@@ -44,9 +44,3 @@ h2 { font-size: 2rem; }
   margin-top: 0;
   margin-bottom: 0;
 }
-
-/* or use shorthand  */
-.wrapper {
-  width: 980px;
-  margin: 0 auto;
-}
