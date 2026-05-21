@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html, body, * {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Heading color utility classes */
-.heading-red { color: #c0392b; }
-.heading-blue { color: #2980b9; }
-.heading-green { color: #27ae60; }
-.heading-purple { color: #8e44ad; }
+heading-red { color: #c0392b; }
+heading-blue { color: #2980b9; }
+heading-green { color: #27ae60; }
+heading-purple { color: #8e44ad; }
 
 /* Larger heading sizes */
 h1 { font-size: 3rem; line-height: 1.1; }
