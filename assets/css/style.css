@@ -130,13 +130,17 @@ h2 { font-size: 2rem; }
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
+  gap: 1rem;
   padding: 1rem 2rem;
   box-sizing: border-box;
   z-index: 5;
 }
+
+.top-header .site-title { justify-self: start; }
+.top-header .top-nav { justify-self: end; }
 
 .top-header .site-title {
   margin: 0;
@@ -168,8 +172,11 @@ h2 { font-size: 2rem; }
 }
 .tagline span { display: block; font-size: 6.6rem; text-shadow: none; position: relative; z-index: 2; }
 
-@media (max-width: 600px) {
-  .top-header { padding: 0.5rem 1rem; }
-  .top-header .site-title { font-size: 1.2rem; }
-  .tagline span { font-size: 4.2rem; }
-}
+@media (max-width: 480px) {
+  .top-header {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
