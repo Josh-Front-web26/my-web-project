@@ -19,3 +19,13 @@
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for legibility */
   padding: 10px;
 }
+
+
+body {
+    background-image: url('red hill.jpg');
+    background-size: cover;          /* Forces image to fill the container */
+    background-position: center;    /* Keeps the image centered */
+    background-repeat: no-repeat;   /* Prevents the image from tiling */
+    height: 100vh;                  /* Ensures the body takes full viewport height */
+    margin: 0;                      /* Removes default browser margins */
+}
