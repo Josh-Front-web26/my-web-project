@@ -6,3 +6,18 @@ body {
     height: 100vh;                  /* Ensures the body takes full viewport height */
     margin: 0;                      /* Removes default browser margins */
 }
+
+header {
+  position: fixed;   /* Keeps the header at the top even when scrolling */
+  top: 0;            /* Aligns it exactly to the top edge */
+  left: 0;           /* Aligns it to the left edge */
+  width: 100%;       /* Makes it span the full width of the screen */
+  background-color: #333; /* Adds a background color */
+  color: white;      /* Changes text color for visibility */
+  padding: 1rem;     /* Adds space inside the header */
+  z-index: 1000;     /* Ensures it stays above other page content */
+}
+
+body {
+  margin-top: 80px; /* Adjust based on your header's actual height */
+}
