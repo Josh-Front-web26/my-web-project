@@ -1,0 +1,21 @@
+.image-container {
+  position: relative;
+  display: inline-block; /* Keeps the container the same size as the image */
+}
+
+.background-image {
+  display: block;
+  width: 100%; /* Adjust as needed */
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the text perfectly */
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for legibility */
+  padding: 10px;
+}
