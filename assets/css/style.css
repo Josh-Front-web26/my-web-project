@@ -1,3 +1,9 @@
-#logo { 
-color: red; 
+#logo {
+	color: #c0392b;
 }
+
+/* Heading color utility classes */
+.heading-red { color: #c0392b; }
+.heading-blue { color: #2980b9; }
+.heading-green { color: #27ae60; }
+.heading-purple { color: #8e44ad; }
