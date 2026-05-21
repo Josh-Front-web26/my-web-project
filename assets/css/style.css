@@ -16,3 +16,37 @@ h2 { font-size: 2rem; }
 	h1 { font-size: 2rem; }
 	.nav-large a { font-size: 1rem; }
 }
+
+/* Base styles for all screens */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+}
+
+/* When content becomes too cramped */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+/* When text lines become too long to read comfortably */
+@media (min-width: 1400px) {
+  .container {
+    font-size: 1.2em;
+  }
+}
+
+.wrapper {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* or use shorthand  */
+.wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
