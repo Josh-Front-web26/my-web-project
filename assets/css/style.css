@@ -19,11 +19,10 @@ h2 { font-size: 2rem; }
 }
 
 /* Header and hero responsive tweaks */
-@media (max-width: 900px) {
-  .top-header { padding: 0.75rem 1.25rem; top: 1.2rem; }
-  .top-header .site-title { font-size: 1.25rem; }
-  .nav-large a { font-size: 1rem; padding: 0.2rem 0.4rem; }
-  .tagline span { font-size: 4.2rem; }
+@media (max-width: 600px) {
+  .top-header { padding: 0.5rem 1rem; top: 0.4rem; }
+  .top-header .site-title { font-size: 1.1rem; }
+  .tagline span { font-size: 1.4rem; }
 }
 
 @media (max-width: 480px) {
@@ -33,7 +32,7 @@ h2 { font-size: 2rem; }
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    top: 0.5rem;
+    top: 0.25rem;
   }
   .top-header .site-title { font-size: 1.05rem; }
   .top-nav ul {
@@ -139,7 +138,7 @@ h2 { font-size: 2rem; }
 /* Header overlay in the hero image */
 .top-header {
   position: absolute;
-  top: 2.5rem;
+  top: 0.6rem;
   left: 0;
   right: 0;
   display: grid;
@@ -223,7 +222,7 @@ h2 { font-size: 2rem; }
   padding-left: 2rem;
 }
 .event-card__content h2 {
-  margin: -0.5rem 0 1rem;
+  margin: -0.5rem 0 2rem;
   color: #ffffff;
   font-size: 2.6rem;
   font-weight: 800;
@@ -232,7 +231,7 @@ h2 { font-size: 2rem; }
   margin: 0 0 1.5rem;
   color: #ffffff;
   max-width: 70ch;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 /* Add spacing between content elements */
 .event-card__content > * + * { margin-top: 0.75rem; }
@@ -240,10 +239,12 @@ h2 { font-size: 2rem; }
 .event-card .button-link {
   background-color: rgba(190, 118, 94, 1);
   color: #ffffff;
-  border-radius: 6px;
-  padding: 6px 12px;
-  font-size: 0.95rem;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.92rem;
   display: inline-block;
+  width: fit-content;
+  white-space: nowrap;
   transition: background-color 0.18s ease, transform 0.18s ease;
   transform-origin: center;
 }
