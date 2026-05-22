@@ -133,7 +133,7 @@ h2 { font-size: 2rem; }
 }
 .top-header .site-title a:hover {
   color: rgba(190, 118, 94, 1);
-  transform: scale(1.08) translateY(2px);
+  transform: scale(1.13) translateY(2px);
 }
 
 /* Header overlay in the hero image */
