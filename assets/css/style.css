@@ -207,11 +207,11 @@ h2 { font-size: 2rem; }
   z-index: 3;
 }
 .event-card__image {
-  flex: 0 0 50%;
-  width: 50%;
+  flex: 0 0 45%;
+  width: 45%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0;
   flex-shrink: 0;
   display: block;
 }
@@ -223,9 +223,9 @@ h2 { font-size: 2rem; }
   padding-left: 2rem;
 }
 .event-card__content h2 {
-  margin: 0 0 1rem;
+  margin: -0.5rem 0 1rem;
   color: #ffffff;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 800;
 }
 .event-card__content p {
@@ -241,7 +241,8 @@ h2 { font-size: 2rem; }
   background-color: rgba(190, 118, 94, 1);
   color: #ffffff;
   border-radius: 6px;
-  padding: 10px 20px;
+  padding: 6px 12px;
+  font-size: 0.95rem;
   display: inline-block;
   transition: background-color 0.18s ease, transform 0.18s ease;
   transform-origin: center;
