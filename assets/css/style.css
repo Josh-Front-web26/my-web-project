@@ -193,10 +193,10 @@ h2 { font-size: 2rem; }
 /* Event card layout for Upcoming Events */
 .event-card {
   display: flex;
-  gap: 1.5rem;
-  align-items: center;
+  gap: 2.5rem;
+  align-items: stretch;
   background: rgba(56, 84, 91, 1);
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 0;
   width: 100vw;
   max-width: 100%;
@@ -207,34 +207,46 @@ h2 { font-size: 2rem; }
   z-index: 3;
 }
 .event-card__image {
-  width: 360px;
-  height: 240px;
+  width: 480px;
+  height: 100%;
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
+  display: block;
+}
+.event-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .event-card__content h2 {
-  margin: 0 0 0.5rem;
-  color: #ffffff;
-  font-size: 2rem;
-  font-weight: 700;
-}
-.event-card__content p {
   margin: 0 0 1rem;
   color: #ffffff;
-  max-width: 70ch;
+  font-size: 2.4rem;
+  font-weight: 800;
 }
+.event-card__content p {
+  margin: 0 0 1.5rem;
+  color: #ffffff;
+  max-width: 70ch;
+  line-height: 1.5;
+}
+/* Add spacing between content elements */
+.event-card__content > * + * { margin-top: 0.75rem; }
 /* Button color specific to the event card */
 .event-card .button-link {
   background-color: rgba(190, 118, 94, 1);
   color: #ffffff;
   border-radius: 6px;
+  padding: 12px 22px;
+  display: inline-block;
 }
 .event-card .button-link:hover {
-  background-color: rgba(160, 100, 80, 1);
+  background-color: rgba(109, 51, 49, 1);
 }
 @media (max-width: 900px) {
-  .event-card { flex-direction: column; align-items: stretch; padding: 1rem; min-height: auto; }
-  .event-card__image { width: 100%; height: 260px; }
-  .event-card__content p { max-width: 100%; }
+  .event-card { flex-direction: column; align-items: stretch; padding: 1rem; min-height: auto; gap: 1rem; }
+  .event-card__image { width: 100%; height: 300px; }
+  .event-card__content h2 { font-size: 1.8rem; }
+  .event-card__content p { margin-bottom: 1rem; }
 }
