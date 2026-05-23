@@ -4,6 +4,12 @@ html, body, * {
   font-family: 'Roboto', sans-serif;
 }
 
+/* ensure no default page gaps */
+html, body { margin: 0; padding: 0; 
+   box-sizing: border-box;
+    overflow-x: hidden; /* prevents layout from pushing the page */
+}
+
 
 /* Larger heading sizes */
 h1 { font-size: 3rem; line-height: 1.1; }
@@ -279,6 +285,24 @@ h2 { font-size: 2rem; }
   .event-card__content p { margin-bottom: 1rem; }
 }
 
+/* Make primary card sections full-bleed (remove right-side white gaps)
+   Targets card elements that also use the `container` helper */
+.event-card.container,
+.news-card.container,
+.team-card.container {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  max-width: none;
+  box-sizing: border-box;
+  /* keep original internal padding for visual spacing */
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 /* Newsletter card layout */
 .newsletter-bleed {
   position: relative;
@@ -313,7 +337,7 @@ h2 { font-size: 2rem; }
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* align headings */
   gap: 2rem;
   flex: 1 1 100%;
   min-width: 320px;
@@ -325,13 +349,22 @@ h2 { font-size: 2rem; }
   min-width: 260px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* headings align to top */
 }
 .newsletter-card__section h2 {
   margin: 0 0 0.75rem;
   font-size: 2.6rem;
   font-weight: 800;
 }
+
+/* inline form for input + button */
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.newsletter-form .newsletter-card__input { max-width: none; flex: 1 1 auto; margin-bottom: 0; }
+.newsletter-form .newsletter-card__subscribe { padding: 0.65rem 1rem; }
 .newsletter-card__section p {
   margin: 0 0 1rem;
   max-width: 48ch;
