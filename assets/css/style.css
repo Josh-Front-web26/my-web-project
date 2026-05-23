@@ -90,7 +90,7 @@ h2 { font-size: 2rem; }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.681);
   z-index: 1;
 }
 
@@ -283,15 +283,15 @@ h2 { font-size: 2rem; }
 .newsletter-card {
   position: relative;
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: stretch;
   justify-content: flex-start;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../images/round house.jpeg") center right / cover no-repeat;
-  padding: 2.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.783), rgba(0, 0, 0, 0.837)), url("../images/round house.jpeg") center right / cover no-repeat;
+  padding: 2.5\rem;
   border-radius: 0;
   width: 100vw;
   max-width: 100%;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   box-sizing: border-box;
   color: #ffffff;
   overflow: hidden;
@@ -327,27 +327,27 @@ h2 { font-size: 2rem; }
 }
 .newsletter-card__input {
   width: 100%;
-  max-width: 420px;
-  padding: 0.85rem 1rem;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.95);
   color: #222222;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   box-sizing: border-box;
 }
 .newsletter-card__subscribe {
   border: none;
-  background: rgba(109, 51, 49, 1);
+  background: rgba(190, 118, 94, 1); 
   color: #ffffff;
-  padding: 0.85rem 1.5rem;
-  border-radius: 8px;
+  padding: 0.65rem 1.5rem;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 0.95rem;
   transition: background-color 0.18s ease, transform 0.18s ease;
 }
 .newsletter-card__subscribe:hover {
-  background: rgba(56, 84, 91, 1);
+  background: rgba(109, 51, 49, 1);
   transform: scale(1.03);
 }
 .newsletter-card__footer {
@@ -418,17 +418,17 @@ h2 { font-size: 2rem; }
   flex: 0 0 50%;
 }
 .news-card__image {
-  flex: 1 1 30%;
-  width: 30%;
-  height: auto;
-  max-height: 320px;
+  flex: 1 1 50%;
+  width: 50%;
+  height: 400px;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 0;
   display: block;
 }
 .news-card__image--wide {
-  flex: 1 1 70%;
-  width: 70%;
+  flex: 1 1 80%;
+  width: 80%;
 }
 .news-card .button-link {
   background-color: rgba(56, 84, 91, 1);
@@ -448,7 +448,7 @@ h2 { font-size: 2rem; }
 }
 @media (max-width: 900px) {
   .news-card { flex-direction: column; align-items: stretch; padding: 1rem; min-height: auto; gap: 1rem; }
-  .news-card__image { width: 100%; max-height: 300px; }
+  .news-card__image { width: 100%; max-height: 400px; }
   .news-card__content h2 { font-size: 1.8rem; }
   .news-card__content p { margin-bottom: 1rem; }
   .news-card__content { padding-right: 0; }
