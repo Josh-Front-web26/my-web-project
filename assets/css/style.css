@@ -279,6 +279,107 @@ h2 { font-size: 2rem; }
   .event-card__content p { margin-bottom: 1rem; }
 }
 
+/* Newsletter card layout */
+.newsletter-card {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: space-between;
+  background: rgba(56, 84, 91, 1);
+  padding: 2rem;
+  border-radius: 0;
+  width: 100vw;
+  max-width: 100%;
+  margin: 2rem 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  z-index: 3;
+}
+.newsletter-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 50%;
+}
+.newsletter-card__section {
+  margin-bottom: 1.75rem;
+}
+.newsletter-card__section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+.newsletter-card__section p {
+  margin: 0 0 1rem;
+  max-width: 48ch;
+  line-height: 1.6;
+}
+.newsletter-card__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+.newsletter-card__input {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.85rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #222222;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+.newsletter-card__subscribe {
+  border: none;
+  background: rgba(109, 51, 49, 1);
+  color: #ffffff;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+.newsletter-card__subscribe:hover {
+  background: rgba(56, 84, 91, 1);
+  transform: scale(1.03);
+}
+.newsletter-card__image-container {
+  flex: 0 0 45%;
+  max-width: 45%;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.newsletter-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  filter: brightness(0.85);
+  display: block;
+}
+@media (max-width: 900px) {
+  .newsletter-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+  }
+  .newsletter-card__image-container {
+    width: 100%;
+    max-width: 100%;
+    min-height: 240px;
+  }
+  .newsletter-card__section h2 {
+    font-size: 2rem;
+  }
+  .newsletter-card__info {
+    padding-bottom: 1rem;
+  }
+}
+
 /* News card layout */
 .news-card {
   display: flex;
