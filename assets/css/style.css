@@ -96,7 +96,7 @@ h2 { font-size: 2rem; }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.681);
+  background: rgba(0, 0, 0, 0.824);
   z-index: 1;
 }
 
