@@ -280,34 +280,52 @@ h2 { font-size: 2rem; }
 }
 
 /* Newsletter card layout */
+.newsletter-bleed {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.833), rgba(0, 0, 0, 0.84)), url("../images/round house.jpeg") center/cover no-repeat;
+  padding: 3rem 0; /* space above and below the card so the image shows */
+  box-sizing: border-box;
+  z-index: 2;
+}
+
 .newsletter-card {
   position: relative;
   display: flex;
   gap: 2.5rem;
   align-items: stretch;
   justify-content: flex-start;
-  background: linear-gradient(rgba(0, 0, 0, 0.783), rgba(0, 0, 0, 0.837)), url("../images/round house.jpeg") center right / cover no-repeat;
-  padding: 2.5\rem;
-  border-radius: 0;
-  width: 100vw;
-  max-width: 100%;
-  margin: 1.5rem 0;
+  background: transparent;
+  padding: 2.5rem 1rem 3.5rem 2.5rem;
+  padding: 2rem 0; /* reduced to shrink the visible image area */
+  max-width: 1200px;
+  margin: 0 auto;
   box-sizing: border-box;
   color: #ffffff;
-  overflow: hidden;
+  overflow: visible;
   z-index: 3;
 }
 .newsletter-card__info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 2rem;
   flex: 1 1 100%;
   min-width: 320px;
-  max-width: 700px;
+  max-width: 100%;
 }
 .newsletter-card__section {
   margin-bottom: 0;
+  flex: 1 1 45%;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .newsletter-card__section h2 {
   margin: 0 0 0.75rem;
@@ -371,9 +389,14 @@ h2 { font-size: 2rem; }
     font-size: 2rem;
   }
   .newsletter-card__info {
+    flex-direction: column;
     padding-bottom: 2.5rem;
+    gap: 1rem;
   }
 }
+
+/* ensure footer is smaller-looking inside the reduced bleed */
+.newsletter-card__footer { margin-top: 1rem; font-size: 0.88rem; }
 
 /* News card layout */
 .news-card {
