@@ -324,8 +324,7 @@ h2 { font-size: 2rem; }
   align-items: stretch;
   justify-content: flex-start;
   background: transparent;
-  padding: 2.5rem 1rem 3.5rem 2.5rem;
-  padding: 2rem 0; /* reduced to shrink the visible image area */
+  padding: 5rem 0 6rem 2.5rem; /* more bottom padding so footer sits at the end */
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -405,7 +404,7 @@ h2 { font-size: 2rem; }
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 1.5rem;
+  bottom: 0;
   text-align: center;
   font-size: 0.92rem;
   letter-spacing: 0.02em;
@@ -429,7 +428,7 @@ h2 { font-size: 2rem; }
 }
 
 /* ensure footer is smaller-looking inside the reduced bleed */
-.newsletter-card__footer { margin-top: 1rem; font-size: 0.88rem; }
+.newsletter-card__footer { font-size: 0.88rem; }
 
 /* News card layout */
 .news-card {
