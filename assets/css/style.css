@@ -324,7 +324,7 @@ h2 { font-size: 2rem; }
   align-items: stretch;
   justify-content: flex-start;
   background: transparent;
-  padding: 5rem 0 6rem 2.5rem; /* more bottom padding so footer sits at the end */
+  padding: 5rem 0 3rem 2.5rem; /* more bottom padding for footer spacing */
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -373,7 +373,7 @@ h2 { font-size: 2rem; }
   display: block;
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
-  color: #ffffff;
+  color: rgba(109, 51, 49, 1);
 }
 .newsletter-card__input {
   width: 100%;
