@@ -373,7 +373,7 @@ h2 { font-size: 2rem; }
   display: block;
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
-  color: rgba(109, 51, 49, 1);
+  color: #ffffff;
 }
 .newsletter-card__input {
   width: 100%;
@@ -404,7 +404,7 @@ h2 { font-size: 2rem; }
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 1.5rem;
   text-align: center;
   font-size: 0.92rem;
   letter-spacing: 0.02em;
@@ -428,7 +428,7 @@ h2 { font-size: 2rem; }
 }
 
 /* ensure footer is smaller-looking inside the reduced bleed */
-.newsletter-card__footer { font-size: 0.88rem; }
+.newsletter-card__footer { margin-top: 1rem; font-size: 0.88rem; }
 
 /* News card layout */
 .news-card {
