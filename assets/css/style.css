@@ -207,33 +207,35 @@ h2 { font-size: 2rem; }
 }
 
 .tour-section__heading h2 {
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 800;
   margin-bottom: 0.5rem;
+  color: rgba(56, 84, 91, 1);
 }
 
 .tour-section__heading h3 {
-  font-size: 2rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.88);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(56, 84, 91, 1);
 }
 
 .tour-image-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 2rem;
+  margin-top: 4rem;
 }
 
 .tour-image-link {
   display: block;
   overflow: hidden;
-  border-radius: 0.75rem;
+  border-radius: 0em;
   transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
 .tour-image-link:hover {
   transform: scale(1.03);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.264);
 }
 
 .tour-image-grid__image {
