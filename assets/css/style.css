@@ -689,65 +689,62 @@ h2 { font-size: 2rem; }
   width: 80%;
 }
 
-/* Canberra Modern only: make news card images smaller and responsive */
+/* Canberra Modern only: make news card images smaller and uncropped */
 .wrapper:not(.news-page) .news-card {
   display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
 }
 
 .wrapper:not(.news-page) .news-card__content {
   flex: 1 1 55%;
-  min-width: 250px;
   padding-right: 1.5rem;
 }
 
 .wrapper:not(.news-page) .news-card__images {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 0 1 260px;
+  align-items: flex-start;
+  flex: 0 0 260px;
   max-width: 260px;
 }
 .wrapper:not(.news-page) .news-card__image {
   width: 100%;
-  max-width: 180px;
-  max-height: 130px;
+  max-width: 260px;
+  max-height: 160px;
   height: auto;
   object-fit: contain;
   display: block;
 }
-.wrapper:not(.news-page) .news-card__image--wide {
-  max-width: 180px;
+
+.wrapper:not(.news-page) .hero-content {
+  position: relative;
 }
-.wrapper:not(.news-page) .news-card__image[src$="news cover.png"] {
-  max-width: 140px;
-}
-.wrapper:not(.news-page) .news-card__image[src$="high court.webp"] {
-  max-width: 180px;
+
+.wrapper:not(.news-page) .tagline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 100%;
+  z-index: 3;
 }
 @media (max-width: 900px) {
   .wrapper:not(.news-page) .news-card {
-    gap: 1.25rem;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
   }
   .wrapper:not(.news-page) .news-card__images {
-    flex: 0 1 180px;
-    max-width: 180px;
+    flex-direction: row;
+    max-width: 100%;
+    width: 100%;
+    justify-content: flex-start;
   }
   .wrapper:not(.news-page) .news-card__image {
-    max-width: 180px;
-    max-height: 110px;
-  }
-  .wrapper:not(.news-page) .news-card__image--wide {
-    max-width: 180px;
-  }
-  .wrapper:not(.news-page) .news-card__image[src$="news cover.png"] {
-    max-width: 140px;
+    max-width: 120px;
+    max-height: 90px;
   }
 }
 .news-card .button-link {
