@@ -84,11 +84,14 @@ h2 { font-size: 2rem; }
   align-items: center;
   justify-content: center;
   position: relative;
+  color: #ffffff;
+}
+
+.wrapper.home {
   background-image: url("../images/red hill.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  color: #ffffff;
 }
 
 .hero-content {
@@ -134,6 +137,12 @@ h2 { font-size: 2rem; }
   background: transparent;
 }
 
+/* Ensure the hero background is removed on events page only */
+.wrapper.events-page {
+  background-image: none !important;
+  background-color: transparent;
+}
+
 .wrapper.news-page .top-header {
   position: relative;
   top: auto;
@@ -166,6 +175,48 @@ h2 { font-size: 2rem; }
 
 .wrapper.news-page .top-nav ul {
   margin: 0;
+}
+
+/* Events page: colored header/navigation bar only for events.html */
+.events-page {
+  margin-top: 0;
+  padding-top: 0;
+}
+.events-page .top-header {
+  position: relative;
+  top: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  max-width: none;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 0;
+  padding: 1.5rem 2rem;
+  background: rgba(56, 84, 91, 1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  z-index: 3;
+}
+.events-page .top-header .site-title {
+  color: #ffffff;
+}
+.events-page .top-header .top-nav a {
+  color: rgba(255, 255, 255, 0.92);
+}
+.events-page .top-header .top-nav a:hover {
+  color: rgba(196, 134, 113, 1);
+}
+.events-page .top-nav ul {
+  margin: 0;
+}
+
+.events-page h3 {
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 
 .news-image-row {
@@ -233,6 +284,14 @@ h2 { font-size: 2rem; }
   margin: 2rem auto 3rem auto;
   width: 100%;
   max-width: 1200px;
+}
+
+.wrapper.news-page .tour-section {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .tour-section__heading h2,
@@ -430,10 +489,13 @@ h2 { font-size: 2rem; }
   padding-left: 2rem;
 }
 .event-card__content h2 {
-  margin: -0.5rem 0 2rem;
+  margin: -0.5rem 0 1rem;
   color: #ffffff;
   font-size: 4rem;
   font-weight: 800;
+}
+.events-page .event-card__content h3 {
+  margin: 0 0 2.5rem;
 }
 .event-card__content p {
   margin: 0 0 3rem;
@@ -485,6 +547,11 @@ h2 { font-size: 2rem; }
   .event-card__image { width: 100%; height: auto; max-height: none; }
   .event-card__content h2 { font-size: 1.8rem; }
   .event-card__content p { margin-bottom: 1rem; }
+}
+
+.events-page .event-card {
+  margin-top: 0;
+  background: rgba(109, 51, 49, 1);
 }
 
 /* Make primary card sections full-bleed (remove right-side white gaps)
