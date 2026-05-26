@@ -676,8 +676,8 @@ h2 { font-size: 2rem; }
   flex: 0 0 60%;
 }
 .news-card__image {
-  flex: 1 1 50%;
-  width: 50%;
+  flex: 1 1 10%;
+  width: 40%;
   height: 400px;
   max-height: 400px;
   object-fit: cover;
@@ -687,6 +687,68 @@ h2 { font-size: 2rem; }
 .news-card__image--wide {
   flex: 1 1 80%;
   width: 80%;
+}
+
+/* Canberra Modern only: make news card images smaller and responsive */
+.wrapper:not(.news-page) .news-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.wrapper:not(.news-page) .news-card__content {
+  flex: 1 1 55%;
+  min-width: 250px;
+  padding-right: 1.5rem;
+}
+
+.wrapper:not(.news-page) .news-card__images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 0 1 260px;
+  max-width: 260px;
+}
+.wrapper:not(.news-page) .news-card__image {
+  width: 100%;
+  max-width: 180px;
+  max-height: 130px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.wrapper:not(.news-page) .news-card__image--wide {
+  max-width: 180px;
+}
+.wrapper:not(.news-page) .news-card__image[src$="news cover.png"] {
+  max-width: 140px;
+}
+.wrapper:not(.news-page) .news-card__image[src$="high court.webp"] {
+  max-width: 180px;
+}
+@media (max-width: 900px) {
+  .wrapper:not(.news-page) .news-card {
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .wrapper:not(.news-page) .news-card__images {
+    flex: 0 1 180px;
+    max-width: 180px;
+  }
+  .wrapper:not(.news-page) .news-card__image {
+    max-width: 180px;
+    max-height: 110px;
+  }
+  .wrapper:not(.news-page) .news-card__image--wide {
+    max-width: 180px;
+  }
+  .wrapper:not(.news-page) .news-card__image[src$="news cover.png"] {
+    max-width: 140px;
+  }
 }
 .news-card .button-link {
   background-color: rgba(56, 84, 91, 1);
