@@ -554,6 +554,65 @@ h2 { font-size: 2rem; }
   background: rgba(109, 51, 49, 1);
 }
 
+.events-page .past-events {
+  background: rgba(56, 84, 91, 1);
+  padding: 2.5rem;
+  margin: 0rem 0 0rem;
+  color: #ffffff;
+}
+.events-page .past-events__header {
+  max-width: 980px;
+  margin-bottom: 1.5rem;
+}
+.events-page .past-events__header h2 {
+  margin: -0.5rem 0 1rem;
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 800;
+}
+.events-page .past-events__header p {
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+  max-width: 56ch;
+}
+.events-page .past-events__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.events-page .past-events__item {
+  border-radius: 0px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.events-page .past-events__image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 720px) {
+  .events-page .past-events {
+    padding: 1.5rem;
+  }
+  .events-page .past-events__grid {
+    grid-template-columns: 1fr;
+  }
+  .events-page .past-events__image {
+    height: 200px;
+  }
+}
+
+/* Events page: Book Now button color override */
+body.events-page .event-card .button-link {
+  background-color: rgba(56, 84, 91, 1);
+  color: #ffffff;
+}
+body.events-page .event-card .button-link:hover {
+  background-color: rgba(190, 118, 94, 1);
+}
+
 /* Make primary card sections full-bleed (remove right-side white gaps)
    Targets card elements that also use the `container` helper */
 .event-card.container,
@@ -570,6 +629,17 @@ h2 { font-size: 2rem; }
   /* keep original internal padding for visual spacing */
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.events-page .past-events.container {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  max-width: none;
+  box-sizing: border-box;
 }
 
 /* Newsletter card layout */
