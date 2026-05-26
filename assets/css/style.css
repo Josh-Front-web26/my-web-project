@@ -282,7 +282,11 @@ h2 { font-size: 2rem; }
 
 @media (max-width: 900px) {
   .tour-image-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .tour-image-link {
+    flex: 1 1 100%;
   }
   .tour-image-grid__image {
     height: auto;
@@ -630,7 +634,8 @@ h2 { font-size: 2rem; }
 
 /* News card layout */
 .news-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2.5rem;
   align-items: center;
   background: rgba(109, 51, 49, 1);
