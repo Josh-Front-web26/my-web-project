@@ -219,6 +219,43 @@ h2 { font-size: 2rem; }
   font-size: 2.5rem;
 }
 
+.building-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.30);
+}
+
+.building-hero {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.building-hero__title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 6.6rem;
+  line-height: 1;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .building-hero__title {
+    font-size: 1.4rem;
+  }
+}
+
 .news-image-row {
   display: flex;
   gap: 0;
